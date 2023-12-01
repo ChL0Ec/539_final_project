@@ -26,14 +26,14 @@ footer {
 }
 
 /* A totally different style of the menu in mobile view */
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 699px) {
+    /* basic web styling */
     body {
         background-color: #1E1E1E;
         font-family: 'Inter', sans-serif;
         letter-spacing: 0.5px;
         line-height: 1.6;
         color: white;
-        /* border: blue solid 1px; */
     }
 
     /* Logo fixed position */
@@ -98,6 +98,7 @@ footer {
         width: 100%;
     }
 
+    /* adjust the nav items */
     .item {
         margin-bottom: 3%;
     }
@@ -109,8 +110,7 @@ footer {
 
     }
 
-    .link:link,
-    .link:visited {
+    .link:link {
         display: inline-block;
         font-size: 3rem;
         font-weight: 300;
@@ -126,6 +126,7 @@ footer {
         transition: all 0.8s;
     }
 
+    /* current page highlighted in the nav */
     nav ul li a {
         text-decoration: none;
         color: white;
@@ -139,6 +140,7 @@ footer {
         color: #1E1E1E;
     }
 
+    /* hover animation, microinteraction for users' pointer */
     nav a:hover {
         display: inline;
         background: rgb(194, 194, 194);
@@ -219,8 +221,6 @@ footer {
         transform: rotate(-135deg);
     }
 
-    /* End of Hamburger Menu */
-
 }
 
 /* The rest of the style will mostly remain the same */
@@ -230,6 +230,7 @@ footer {
         object-fit: cover;
     }
 
+    /* styling for this breakpoint */
     section {
         padding: 15% 8%;
     }
@@ -281,18 +282,13 @@ footer {
         /* Default to hidden */
         display: none;
 
-        /* Overlay entire screen */
         position: fixed;
         z-index: 999;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-
-        /* A bit of padding around image */
         padding: 20%;
-
-        /* Translucent background */
         background: rgba(0, 0, 0, 0.8);
     }
 
@@ -302,17 +298,16 @@ footer {
     }
 
     .lightbox span {
-        /* Full width and height */
         display: block;
         width: 100%;
         height: 100%;
 
-        /* Size and position background image */
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
     }
 
+    /* video styling */
     .video-container {
         position: relative;
         padding: 0 8%;
@@ -341,6 +336,7 @@ footer {
         /* Show controls on hover */
     }
 
+    /* inserting the control buttons */
     .control-btn{
         background: transparent;
         border: none;
@@ -360,6 +356,7 @@ footer {
         opacity: 1;
     }
 
+    /* transform the control buttons */
     #backwardBtn {
         transform: scaleX(-1);
         margin-right: 20px;
@@ -368,12 +365,10 @@ footer {
     #forwardBtn {
         margin-left: 20px;
     }
-
-
 }
 
 /* Different grid style for second large screen breakpoint */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
     .checkbox {
         display: none;
     }
@@ -393,6 +388,7 @@ footer {
         z-index: 99;
     }
 
+    /* diffferent nav style for larger web view */
     nav {
         display: flex;
         justify-content: flex-end;
@@ -502,5 +498,67 @@ footer {
     .media-item:hover {
         transform: none;
         transition: none;
+    }
+
+    /* disable the 3D animation in the brief history of the design of HMI section */
+    .image-grid,
+    .image-item,
+    .image-grid img {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .checkbox:checked~.background {
+        transform: none;
+        transition: none;
+    }
+
+    .checkbox:checked~.nav {
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 1;
+        width: 100%;
+        right: 0;
+        transition: none;
+    }
+
+    /* close the menu without animation */
+    .checkbox:not(:checked)~.nav {
+        right: -60vw;
+        opacity: 0;
+        background-color: transparent;
+        transition: none;
+    }
+
+    .icon,
+    .icon::before,
+    .icon::after {
+        transition: none;
+    }
+
+    .button:hover .icon::before,
+    .button:hover .icon::after,
+    .checkbox:checked+.button .icon::before,
+    .checkbox:checked+.button .icon::after {
+        transition: none;
+    }
+
+    /* Disable the hamburger icon animation in reduce motion */
+    .icon,
+    .icon::before,
+    .icon::after {
+        transition: none;
+    }
+
+    .checkbox:checked+.button .icon {
+        background-color: transparent;
+    }
+
+    .checkbox:checked+.button .icon::before {
+        transform: rotate(135deg);
+    }
+
+    .checkbox:checked+.button .icon::after {
+        transform: rotate(-135deg);
     }
 }
