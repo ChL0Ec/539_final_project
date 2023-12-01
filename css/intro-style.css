@@ -376,7 +376,7 @@ footer {
         line-height: 1.5;
     }
     /* create a gradient border for the pinciples class */
-    #gradient-border {
+    #gradient-border1,  #gradient-border2,  #gradient-border3 {
         border: 1px solid transparent;
         background: linear-gradient(45deg, #175252, #225A72);
         background-clip: padding-box;
@@ -386,7 +386,7 @@ footer {
     }
 
     /* Create a pseudo-element for the content's background */
-    #gradient-border:before {
+    #gradient-border1:before,#gradient-border2:before,#gradient-border3:before {
         content: '';
         position: absolute;
         top: 0;
