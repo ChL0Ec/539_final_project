@@ -301,7 +301,6 @@ footer {
         padding: 3% 3% 0 3%;
         transition: transform 0.3s ease-out;
         transform-style: preserve-3d;
-        cursor: pointer;
     }
 
     .image-item {
@@ -569,15 +568,6 @@ footer {
         right: 0;
         transition: none;
     }
-
-    /* close the menu without animation */
-    .checkbox:not(:checked)~.nav {
-        right: -60vw;
-        opacity: 0;
-        background-color: transparent;
-        transition: none;
-    }
-
     .icon,
     .icon::before,
     .icon::after {

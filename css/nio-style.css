@@ -522,14 +522,6 @@ footer {
         transition: none;
     }
 
-    /* close the menu without animation */
-    .checkbox:not(:checked)~.nav {
-        right: -60vw;
-        opacity: 0;
-        background-color: transparent;
-        transition: none;
-    }
-
     .icon,
     .icon::before,
     .icon::after {
