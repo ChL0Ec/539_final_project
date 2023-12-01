@@ -484,3 +484,23 @@ footer {
     }
 
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .skip {
+        position: static;
+        clip: auto;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        white-space: normal;
+    }
+
+    .background{
+        transition: none;
+    }
+
+    .media-item:hover {
+        transform: none;
+        transition: none;
+    }
+}

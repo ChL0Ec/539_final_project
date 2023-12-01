@@ -138,6 +138,7 @@ footer {
         background-color: white;
         color: #1E1E1E;
     }
+
     nav a:hover {
         display: inline;
         background: rgb(194, 194, 194);
@@ -489,41 +490,52 @@ footer {
         font-weight: 300;
     }
 
-    .history h2{
-        font-size:26px;
-        font-weight:500;
+    .history h2 {
+        font-size: 26px;
+        font-weight: 500;
     }
 
-    .principles-container{
+    .principles-container {
         max-width: 84%;
         margin-bottom: 10%;
     }
 
-    .principle-bigger{
+    .principle-bigger {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: space-between;
         gap: 15px;
     }
 
-    .principle-item{
+    .principle-item {
         height: 20vh;
         padding: 8% 3%;
         margin-bottom: 0;
     }
 
-    .principle-item:last-child{
+    .principle-item:last-child {
         grid-column: 1/3;
         width: 50%;
-        margin-left:auto;
-        margin-right:auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .principles-container h2{
+    .principles-container h2 {
         font-size: 26px;
         font-weight: 500;
         color: white;
         margin: 10% 0 5% 0;
     }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skip a {
+        -webkit-transition: none;
+        transition: none;
+    }
+
+    .image-grid{
+        transform: none;
+    }
 }
