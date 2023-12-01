@@ -530,7 +530,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .skip a {
+    .skip{
         -webkit-transition: none;
         transition: none;
     }
