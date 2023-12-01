@@ -535,16 +535,25 @@ footer {
         transition: none;
     }
 
-    nav{
-        transform: none;
-        transition: none;
-    }
-
     .image-grid{
         transform: none;
     }
 
-    .icon{
-        transform: none;
+    .icon,
+    .icon::before,
+    .icon::after {
+        transition: none; /* Disable animations */
+    }
+
+    .checkbox:checked+.button .icon {
+        background-color: transparent;
+    }
+
+    .checkbox:checked+.button .icon::before {
+        transform: rotate(135deg);
+    }
+
+    .checkbox:checked+.button .icon::after {
+        transform: rotate(-135deg);
     }
 }
