@@ -535,7 +535,16 @@ footer {
         transition: none;
     }
 
+    nav{
+        transform: none;
+        transition: none;
+    }
+
     .image-grid{
+        transform: none;
+    }
+
+    .icon{
         transform: none;
     }
 }
